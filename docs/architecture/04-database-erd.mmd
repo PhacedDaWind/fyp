@@ -1,0 +1,96 @@
+erDiagram
+  ADMIN_USER ||--o{ AUDIT_LOG : performs
+  VEHICLE_OWNER ||--o{ VEHICLE : owns
+  VEHICLE ||--o{ PARKING_PERMIT : has
+  PARKING_PERMIT ||--o{ PAYMENT_RECORD : records
+  VEHICLE ||--o{ VISITOR_REQUEST : requests
+  CAMERA ||--o{ RECOGNITION_EVENT : captures
+  VEHICLE o|--o{ RECOGNITION_EVENT : matches
+  RECOGNITION_EVENT ||--o| ACCESS_DECISION : produces
+  ACCESS_DECISION ||--o| PASSAGE_EVENT : may_confirm
+  ADMIN_USER {
+    bigint id PK
+    string email UK
+    string password_hash
+    string role
+    boolean active
+  }
+  VEHICLE_OWNER {
+    bigint id PK
+    string name
+    string category
+    string institutional_id
+  }
+  VEHICLE {
+    bigint id PK
+    bigint owner_id FK
+    string normalized_plate UK
+    string description
+    boolean blocked
+  }
+  PARKING_PERMIT {
+    bigint id PK
+    bigint vehicle_id FK
+    date valid_from
+    date valid_to
+    string status
+  }
+  PAYMENT_RECORD {
+    bigint id PK
+    bigint permit_id FK
+    decimal amount_myr
+    string reference
+    string status
+    datetime paid_at
+  }
+  VISITOR_REQUEST {
+    bigint id PK
+    bigint vehicle_id FK
+    datetime valid_from
+    datetime valid_until
+    string approval_status
+    bigint reviewed_by FK
+  }
+  CAMERA {
+    bigint id PK
+    string gate_name
+    string direction
+    boolean enabled
+  }
+  RECOGNITION_EVENT {
+    string id PK
+    bigint camera_id FK
+    bigint matched_vehicle_id FK
+    string device_event_key UK
+    datetime captured_at
+    datetime received_at
+    string recognized_plate
+    decimal confidence
+    string model_version
+    string processing_status
+    string evidence_key
+  }
+  ACCESS_DECISION {
+    string id PK
+    string recognition_event_id FK,UK
+    string outcome
+    string reason
+    datetime expires_at
+    string command_status
+    datetime acknowledged_at
+  }
+  PASSAGE_EVENT {
+    string id PK
+    string decision_id FK,UK
+    string direction
+    datetime passed_at
+    string confirmation_source
+  }
+  AUDIT_LOG {
+    bigint id PK
+    bigint admin_user_id FK
+    string action
+    string entity_type
+    string entity_id
+    datetime created_at
+  }

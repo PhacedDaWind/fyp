@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="HELP FYP architecture" version="26.0.0" type="device">
+  <diagram id="page-1" name="Registered Vehicle Entry Sequence">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1580" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Registered Vehicle Entry Sequence&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1740" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="Attempt logs may be saved earlier. The parking entry / exit is saved only after confirmed passage." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1740" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="&lt;b&gt;Camera connector&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n5" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="215" />
+            <mxPoint as="targetPoint" x="170" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;Application API&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="390" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n7" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="215" />
+            <mxPoint as="targetPoint" x="520" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n8" value="&lt;b&gt;Plate reader&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="740" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n9" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="215" />
+            <mxPoint as="targetPoint" x="870" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n10" value="&lt;b&gt;MySQL database&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1090" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n11" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="215" />
+            <mxPoint as="targetPoint" x="1220" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n12" value="&lt;b&gt;Guard / gate + sensor&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1500" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n13" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="215" />
+            <mxPoint as="targetPoint" x="1630" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n14" value="1. Upload picture + unique attempt ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="280" />
+            <mxPoint as="targetPoint" x="520" y="280" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n15" value="2. Read plate" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="365" />
+            <mxPoint as="targetPoint" x="870" y="365" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n16" value="3. Return plate and confidence" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="450" />
+            <mxPoint as="targetPoint" x="520" y="450" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n17" value="4. Look up plate and entry permission" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="535" />
+            <mxPoint as="targetPoint" x="1220" y="535" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n18" value="5. Return vehicle and valid permission" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="620" />
+            <mxPoint as="targetPoint" x="520" y="620" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n19" value="6. Return fresh entry permission" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="705" />
+            <mxPoint as="targetPoint" x="170" y="705" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n20" value="7. Request gate opening once" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="790" />
+            <mxPoint as="targetPoint" x="1630" y="790" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n21" value="8. Gate command result (not proof of passage)" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="875" />
+            <mxPoint as="targetPoint" x="170" y="875" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n22" value="9. Sensor or guard confirms vehicle has passed" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="960" />
+            <mxPoint as="targetPoint" x="170" y="960" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n23" value="10. Report confirmed entry + unique passage ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="1045" />
+            <mxPoint as="targetPoint" x="520" y="1045" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n24" value="11. Save entry time and open parking visit" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1130" />
+            <mxPoint as="targetPoint" x="1220" y="1130" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n25" value="12. Saved once; repeated passage reports do not duplicate records" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="1215" />
+            <mxPoint as="targetPoint" x="520" y="1215" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n26" value="13. Confirm record saved" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1300" />
+            <mxPoint as="targetPoint" x="170" y="1300" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n27" value="Unknown plate: use the Guest Entry sequence. Failed checks need guard review. No confirmed passage means no entry record. Gate safety sensors remain active." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1460" width="1750" height="85" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-2" name="Guest Entry with Guard Sequence">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1580" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Guest Entry with Guard Sequence&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1740" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="Attempt logs may be saved earlier. The parking entry / exit is saved only after confirmed passage." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1740" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="&lt;b&gt;Camera connector&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n5" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="215" />
+            <mxPoint as="targetPoint" x="170" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;Application API&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="390" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n7" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="215" />
+            <mxPoint as="targetPoint" x="520" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n8" value="&lt;b&gt;Plate reader&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="740" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n9" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="215" />
+            <mxPoint as="targetPoint" x="870" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n10" value="&lt;b&gt;MySQL database&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1090" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n11" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="215" />
+            <mxPoint as="targetPoint" x="1220" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n12" value="&lt;b&gt;Guard / gate + sensor&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1500" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n13" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="215" />
+            <mxPoint as="targetPoint" x="1630" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n14" value="1. Upload picture + unique attempt ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="280" />
+            <mxPoint as="targetPoint" x="520" y="280" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n15" value="2. Read plate" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="365" />
+            <mxPoint as="targetPoint" x="870" y="365" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n16" value="3. Return plate and confidence" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="450" />
+            <mxPoint as="targetPoint" x="520" y="450" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n17" value="4. Look up plate and entry permission" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="535" />
+            <mxPoint as="targetPoint" x="1220" y="535" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n18" value="5. Plate not found: wait for guard" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="620" />
+            <mxPoint as="targetPoint" x="520" y="620" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n19" value="6. Show plate for guard to check / correct" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="705" />
+            <mxPoint as="targetPoint" x="1630" y="705" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n20" value="7. Guard confirms plate and manual opening" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="790" />
+            <mxPoint as="targetPoint" x="520" y="790" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n21" value="8. Guard opens gate; connector records the action" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="875" />
+            <mxPoint as="targetPoint" x="170" y="875" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n22" value="9. Sensor or guard confirms vehicle has passed" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="960" />
+            <mxPoint as="targetPoint" x="170" y="960" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n23" value="10. Report confirmed entry + unique passage ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="1045" />
+            <mxPoint as="targetPoint" x="520" y="1045" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n24" value="11. Save Guest plate + entry time + open visit + guard reference together" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1130" />
+            <mxPoint as="targetPoint" x="1220" y="1130" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n25" value="12. Saved once; repeated passage reports do not duplicate records" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="1215" />
+            <mxPoint as="targetPoint" x="520" y="1215" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n26" value="13. Confirm record saved" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1300" />
+            <mxPoint as="targetPoint" x="170" y="1300" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n27" value="No guard opening or no confirmed passage: no guest entry is saved. Saving a guest does not give permanent automatic entry permission. Gate safety sensors remain active." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1460" width="1750" height="85" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-3" name="Vehicle and Guest Exit Sequence">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1580" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Vehicle and Guest Exit Sequence&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1740" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="Attempt logs may be saved earlier. The parking entry / exit is saved only after confirmed passage." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1740" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="&lt;b&gt;Camera connector&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n5" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="215" />
+            <mxPoint as="targetPoint" x="170" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;Application API&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="390" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n7" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="215" />
+            <mxPoint as="targetPoint" x="520" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n8" value="&lt;b&gt;Plate reader&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="740" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n9" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="215" />
+            <mxPoint as="targetPoint" x="870" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n10" value="&lt;b&gt;MySQL database&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1090" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n11" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="215" />
+            <mxPoint as="targetPoint" x="1220" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n12" value="&lt;b&gt;Guard / gate + sensor&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1500" y="150" width="260" height="65" />
+        </mxCell>
+        <mxCell id="n13" value="" edge="1" parent="1" style="html=1;endArrow=none;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="215" />
+            <mxPoint as="targetPoint" x="1630" y="1410" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n14" value="1. Upload picture + unique attempt ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="280" />
+            <mxPoint as="targetPoint" x="520" y="280" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n15" value="2. Read plate" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="365" />
+            <mxPoint as="targetPoint" x="870" y="365" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n16" value="3. Return plate and confidence" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="870" y="450" />
+            <mxPoint as="targetPoint" x="520" y="450" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n17" value="4. Look up latest open visit and entry time (no status checks)" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="535" />
+            <mxPoint as="targetPoint" x="1220" y="535" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n18" value="5. Return entry time, or no matching entry" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="620" />
+            <mxPoint as="targetPoint" x="520" y="620" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n19" value="6. Calculate duration; send plate + duration for display" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="705" />
+            <mxPoint as="targetPoint" x="170" y="705" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n20" value="7. Show duration and open exit gate" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="790" />
+            <mxPoint as="targetPoint" x="1630" y="790" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n21" value="8. Gate command result (not proof of passage)" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="875" />
+            <mxPoint as="targetPoint" x="170" y="875" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n22" value="9. Sensor or guard confirms vehicle has passed" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1630" y="960" />
+            <mxPoint as="targetPoint" x="170" y="960" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n23" value="10. Report confirmed exit + unique passage ID" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="170" y="1045" />
+            <mxPoint as="targetPoint" x="520" y="1045" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n24" value="11. Save exit time + final duration; mark visit EXITED" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=0;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1130" />
+            <mxPoint as="targetPoint" x="1220" y="1130" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n25" value="12. Saved once; repeated passage reports do not duplicate records" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1220" y="1215" />
+            <mxPoint as="targetPoint" x="520" y="1215" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n26" value="13. Confirm record saved" edge="1" parent="1" style="html=1;endArrow=block;strokeColor=#2878A6;strokeWidth=2;dashed=1;fontSize=14;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="520" y="1300" />
+            <mxPoint as="targetPoint" x="170" y="1300" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n27" value="No status or payment checks. Missing entry: show Duration unavailable and still open; save an unmatched EXITED record after passage. Unreadable plate / outage: guard assists. Gate safety sensors remain active." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1460" width="1750" height="85" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

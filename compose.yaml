@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: parking
+      MYSQL_USER: parking
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Run scripts/setup.ps1 first}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Run scripts/setup.ps1 first}
+    volumes:
+      - parking_db:/var/lib/mysql
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost]
+      interval: 5s
+      retries: 30
+  migrate:
+    build: ./db
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./db/changelog:/liquibase/changelog:ro
+    environment:
+      LIQUIBASE_COMMAND_URL: jdbc:mysql://db:3306/parking?allowPublicKeyRetrieval=true&useSSL=false
+      LIQUIBASE_COMMAND_USERNAME: parking
+      LIQUIBASE_COMMAND_PASSWORD: ${DB_PASSWORD}
+    command: [--changelog-file=changelog/001-initial.sql, update]
+  api:
+    build: ./backend
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      DB_PASSWORD: ${DB_PASSWORD}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+    ports:
+      - 127.0.0.1:8000:8000
+volumes:
+  parking_db:

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="HELP FYP architecture" version="26.0.0" type="device">
+  <diagram id="page-1" name="Entrance and Guest Process Flow">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Entrance and Guest Process Flow&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1600" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="Save the parking record only after the vehicle passes the gate." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1600" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="Vehicle reaches entrance" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="145" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n5" value="Capture picture and read plate" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="290" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n6" value="Plate clear and&lt;br&gt;system available?" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="435" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n7" value="Find plate in the vehicle list" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="590" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n8" value="Plate found?" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="745" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n9" value="Entry allowed?&lt;br&gt;Not blocked; valid permission" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="915" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n10" value="Request gate opening" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="1090" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n11" value="Vehicle passed&lt;br&gt;the gate?" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="1250" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n12" value="Save entry time and open a parking visit" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="580" y="1430" width="320" height="95" />
+        </mxCell>
+        <mxCell id="n13" value="Keep gate closed&lt;br&gt;Guard checks / corrects the plate&lt;br&gt;Guard decides whether to open" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1130" y="590" width="400" height="110" />
+        </mxCell>
+        <mxCell id="n14" value="Guard opens&lt;br&gt;the gate?" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1170" y="775" width="320" height="110" />
+        </mxCell>
+        <mxCell id="n15" value="Mark this attempt as a guest visit&lt;br&gt;Use the plate confirmed by the guard&lt;br&gt;No guest record saved yet" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1130" y="965" width="400" height="110" />
+        </mxCell>
+        <mxCell id="n16" value="Gate stays closed&lt;br&gt;No entry or exit record" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#FCE8E4;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1150" y="1415" width="360" height="95" />
+        </mxCell>
+        <mxCell id="n17" value="No confirmed passage:&lt;br&gt;save attempt / fault only&lt;br&gt;Do not create a parking record" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#FCE8E4;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="1235" width="370" height="115" />
+        </mxCell>
+        <mxCell id="n18" value="" edge="1" parent="1" source="n4" target="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n19" value="" edge="1" parent="1" source="n5" target="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n20" value="Yes" edge="1" parent="1" source="n6" target="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n21" value="No" edge="1" parent="1" source="n6" target="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1040" y="480" />
+              <mxPoint x="1040" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n22" value="" edge="1" parent="1" source="n7" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n23" value="Yes" edge="1" parent="1" source="n8" target="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n24" value="No" edge="1" parent="1" source="n8" target="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1030" y="790" />
+              <mxPoint x="1030" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n25" value="Yes" edge="1" parent="1" source="n9" target="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n26" value="No" edge="1" parent="1" source="n9" target="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="990" y="960" />
+              <mxPoint x="990" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n27" value="" edge="1" parent="1" source="n13" target="n14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n28" value="Yes" edge="1" parent="1" source="n14" target="n15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n29" value="No" edge="1" parent="1" source="n14" target="n16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1600" y="830" />
+              <mxPoint x="1600" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n30" value="Gate opened manually" edge="1" parent="1" source="n15" target="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1060" y="1020" />
+              <mxPoint x="1060" y="1295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n31" value="" edge="1" parent="1" source="n10" target="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n32" value="Yes" edge="1" parent="1" source="n11" target="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n33" value="No / timeout" edge="1" parent="1" source="n11" target="n17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n34" value="For a new plate admitted by the guard:&lt;br&gt;&lt;b&gt;save the plate as Guest together with the entry record after passage.&lt;/b&gt;&lt;br&gt;Existing blocked or expired vehicles keep their original category." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="800" width="380" height="205" />
+        </mxCell>
+        <mxCell id="n35" value="Guard actions are recorded. A manual opening is not proof of passage. Use a passage sensor or explicit guard confirmation. Close the gate only when safe." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="1570" width="1460" height="90" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-2" name="Exit Process Flow">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1550" pageHeight="1570" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Exit Process Flow&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1450" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="Scan plate → show parking duration → open exit gate → save after passage." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1450" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="Vehicle reaches exit" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="140" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n5" value="Scan and read the number plate" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="270" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n6" value="Find the latest open visit for this plate&lt;br&gt;Read the entry time" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="400" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n7" value="Calculate parking duration&lt;br&gt;Current time minus entry time" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="540" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n8" value="Show plate and parking duration&lt;br&gt;on the exit screen" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="680" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n9" value="Open the exit gate" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="820" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n10" value="Vehicle passed the gate?" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rhombus;fillColor=#FFF1CD;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="960" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n11" value="Save exit time and final duration&lt;br&gt;Mark this visit as EXITED in the database" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="1150" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n12" value="Close gate when safe" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="1330" width="400" height="90" />
+        </mxCell>
+        <mxCell id="n13" value="" edge="1" parent="1" source="n4" target="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n14" value="" edge="1" parent="1" source="n5" target="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n15" value="" edge="1" parent="1" source="n6" target="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n16" value="" edge="1" parent="1" source="n7" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n17" value="" edge="1" parent="1" source="n8" target="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n18" value="" edge="1" parent="1" source="n9" target="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n19" value="Yes" edge="1" parent="1" source="n10" target="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n20" value="" edge="1" parent="1" source="n11" target="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n21" value="No confirmed passage:&lt;br&gt;keep the visit open&lt;br&gt;Record attempt / fault only" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#FCE8E4;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1070" y="950" width="360" height="115" />
+        </mxCell>
+        <mxCell id="n22" value="No / timeout" edge="1" parent="1" source="n10" target="n21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n23" value="No permit, payment, blocked-status or guest-approval check at exit.&lt;br&gt;The entry lookup is only for calculating duration and finding the visit to update." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="410" width="360" height="185" />
+        </mxCell>
+        <mxCell id="n24" value="No matching entry?&lt;br&gt;Show “Duration unavailable” and still open the gate.&lt;br&gt;After passage, save the plate and exit time as an unmatched EXITED record." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1050" y="440" width="390" height="195" />
+        </mxCell>
+        <mxCell id="n25" value="Plate unreadable or system unavailable?&lt;br&gt;Guard helps with the plate / manual exit.&lt;br&gt;Record confirmed exit when the system is available." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="750" width="360" height="175" />
+        </mxCell>
+        <mxCell id="n26" value="Guests and registered vehicles follow the same exit steps. Final duration = confirmed exit time minus entry time. Repeated passage reports must not save duplicate exits." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="1450" width="1390" height="80" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

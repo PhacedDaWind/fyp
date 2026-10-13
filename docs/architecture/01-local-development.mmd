@@ -1,0 +1,25 @@
+flowchart LR
+  admin[Administrator]
+  subgraph pc[Development computer]
+    ui[Vue admin frontend]
+    api[Backend API\nAuthentication and parking rules]
+    db[(Local MySQL)]
+    connector[Camera and device connector]
+    worker[Recognition worker\nMock first, partner model later]
+    store[Local evidence folder\nOptional retained images]
+    simulator[Display and barrier simulator]
+  end
+  source[Sample image or video\nLater: campus RTSP camera]
+  admin --> ui
+  ui <-->|HTTP JSON via local dev proxy| api
+  api <-->|SQL| db
+  source -->|Frames| connector
+  connector -->|Selected frame and event ID| api
+  api -->|Recognition request| worker
+  worker -->|Plate candidates and confidence| api
+  api -->|Optional image retention| store
+  connector -->|Poll decision for event ID| api
+  api -->|Allow, deny or review with expiry| connector
+  connector -->|Simulated action| simulator
+  simulator -->|Acknowledgement| connector
+  connector -->|Action result| api

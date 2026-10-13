@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="HELP FYP architecture" version="26.0.0" type="device">
+  <diagram id="page-1" name="Local Development Architecture">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;b&gt;Local Development Architecture&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontColor=#23394D;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1400" height="45" />
+        </mxCell>
+        <mxCell id="n3" value="HELP University parking system • Build and test on one computer before using AWS." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#657787;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="77" width="1400" height="40" />
+        </mxCell>
+        <mxCell id="n4" value="YOUR COMPUTER" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#F5FAF7;strokeColor=#35745B;strokeWidth=2;verticalAlign=top;align=left;spacingTop=12;spacingLeft=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="290" y="155" width="1160" height="590" />
+        </mxCell>
+        <mxCell id="n5" value="&lt;b&gt;Administrator&lt;/b&gt;&lt;br&gt;Uses a web browser" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="215" width="200" height="80" />
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;Test images or video&lt;/b&gt;&lt;br&gt;Real camera added later" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="440" width="200" height="95" />
+        </mxCell>
+        <mxCell id="n7" value="&lt;b&gt;Admin website&lt;/b&gt;&lt;br&gt;Vue frontend" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="340" y="215" width="220" height="80" />
+        </mxCell>
+        <mxCell id="n8" value="&lt;b&gt;Application API&lt;/b&gt;&lt;br&gt;Login, vehicles and access rules" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="665" y="215" width="240" height="95" />
+        </mxCell>
+        <mxCell id="n9" value="&lt;b&gt;Local MySQL&lt;/b&gt;&lt;br&gt;Vehicles, permits and records" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1100" y="215" width="250" height="100" />
+        </mxCell>
+        <mxCell id="n10" value="&lt;b&gt;Camera connector&lt;/b&gt;&lt;br&gt;Chooses a useful frame" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="340" y="440" width="220" height="80" />
+        </mxCell>
+        <mxCell id="n11" value="&lt;b&gt;Plate reader&lt;/b&gt;&lt;br&gt;Simulated result first&lt;br&gt;Partner AI model later" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="665" y="440" width="240" height="100" />
+        </mxCell>
+        <mxCell id="n12" value="&lt;b&gt;Gate and screen simulator&lt;/b&gt;&lt;br&gt;No real gate opens in early tests" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=1;arcSize=12;fillColor=#EAF2F8;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1090" y="455" width="270" height="90" />
+        </mxCell>
+        <mxCell id="n13" value="Open website" edge="1" parent="1" source="n5" target="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n14" value="Local HTTP / JSON" edge="1" parent="1" source="n7" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n15" value="Read / save data" edge="1" parent="1" source="n8" target="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n16" value="Image frames" edge="1" parent="1" source="n6" target="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n17" value="Send frame" edge="1" parent="1" source="n10" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="620" y="480" />
+              <mxPoint x="620" y="340" />
+              <mxPoint x="785" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n18" value="Read plate" edge="1" parent="1" source="n8" target="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#2878A6;fontColor=#2878A6;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="n19" value="Plate + confidence" edge="1" parent="1" source="n11" target="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#35745B;fontColor=#35745B;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.2;entryX=1;entryY=0.8;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="965" y="460" />
+              <mxPoint x="965" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n20" value="Reply to decision poll" edge="1" parent="1" source="n8" target="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#35745B;fontColor=#35745B;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="580" y="350" />
+              <mxPoint x="450" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n21" value="Apply fresh decision" edge="1" parent="1" source="n10" target="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#35745B;fontColor=#35745B;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="450" y="585" />
+              <mxPoint x="1225" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n22" value="The connector applies the decision to the simulator and reports the result. It will handle real devices later." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="345" y="615" width="1000" height="65" />
+        </mxCell>
+        <mxCell id="n23" value="&lt;b&gt;No EC2 or RDS yet.&lt;/b&gt; Use local MySQL. Keep passwords out of source code. Python is proposed for the API; confirm this with the partner." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontColor=#23394D;rounded=0;fillColor=#FFF7DF;strokeColor=#78909C;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="790" width="1400" height="80" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

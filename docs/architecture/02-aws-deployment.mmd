@@ -1,0 +1,29 @@
+flowchart LR
+  admin[Admin browser]
+  subgraph campus[HELP campus network]
+    camera[IP camera]
+    gateway[Campus connector\nExisting PC or suitable gateway]
+    devices[Display and barrier controller\nWith local safety interlocks]
+    camera -->|RTSP stream on campus LAN| gateway
+    gateway <-->|Device-specific interface| devices
+  end
+  subgraph aws[AWS VPC - future deployment]
+    subgraph public[Public subnet]
+      subgraph ec2[EC2 application host]
+        proxy[HTTPS reverse proxy\nVue static files and API routing]
+        api[Backend API\nAuth, permissions and decisions]
+        worker[Recognition worker\nCPU or GPU after benchmarking]
+        proxy <-->|Internal HTTP| api
+        api <-->|Internal recognition interface| worker
+      end
+    end
+    subgraph private[Private DB subnet group]
+      db[(RDS for MySQL\nNot publicly accessible)]
+    end
+    api <-->|MySQL TLS; DB security group permits app only| db
+  end
+  evidence[(Optional private S3 evidence storage)]
+  admin <-->|HTTPS 443| proxy
+  gateway -->|Outbound HTTPS: frame upload and decision polling| proxy
+  proxy -->|Responses on connector-initiated requests| gateway
+  api -->|Optional images via instance role| evidence

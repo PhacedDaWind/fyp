@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const out='C:/Users/USER/VisualStudioCodeProjects/fyp/outputs/fyp-gantt';
+const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(`${out}/HELP-University-FYP-Gantt.xlsx`));
+const s=wb.worksheets.getItem('FYP Gantt');
+const cols=['A','B','C','D','E','F','G','H','I'];
+[44,115,345,90,90,65,83,87,130].forEach((w,i)=>s.getRange(`${cols[i]}1:${cols[i]}50`).format.columnWidthPx=w);
+s.getRange('J1:AQ50').format.columnWidthPx=48;
+s.getRange('J9:AQ9').conditionalFormats.addCustom('AND($D$7>=J$9,$D$7<J$9+7)',{fill:'#B83B35',font:{color:'#FFFFFF',bold:true}});
+wb.recalculate();
+await(await SpreadsheetFile.exportXlsx(wb)).save(`${out}/HELP-University-FYP-Gantt.xlsx`);
+const img=await wb.render({sheetName:s.name,range:'A1:Q21',scale:1,format:'png'});
+await fs.writeFile(`${out}/gantt-preview.png`,new Uint8Array(await img.arrayBuffer()));
