@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="architecture">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/docs/architecture/drawio.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/architecture/HELP_Parking_System_Drawio_Pack.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

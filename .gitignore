@@ -9,3 +9,7 @@ test-results/
 __pycache__/
 .pytest_cache/
 .venv/
+backend/models/
+tmp/hyperlpr/
+.certs/
+public/help-park-dev-ca.crt

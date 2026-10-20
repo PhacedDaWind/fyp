@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "dev:camera": "vite --mode camera --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test tests/*.test.js"

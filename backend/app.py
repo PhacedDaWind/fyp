@@ -1,4 +1,4 @@
-"""Local parking API. Recognition and gate actions are explicitly simulated."""
+"""Local parking API with experimental photo recognition and simulated gates."""
 import hashlib
 import hmac
 import os
@@ -161,9 +161,7 @@ def read_plate_photo(photo: UploadFile = File(...), u=Depends(user)):
         raise HTTPException(422, str(exc)) from exc
     except RuntimeError as exc:
         raise HTTPException(503, str(exc)) from exc
-    return {'plate': reading.plate if reading else None,
-            'model': reading.model if reading else 'tesseract-baseline',
-            'confidence': None, 'needs_review': True}
+    return reading
 def vehicle_values(data):
     if data.category not in ('Student','Staff','Visitor') or not data.owner.strip() or (data.category != 'Visitor' and not data.ownerId.strip()): raise HTTPException(422,'Invalid owner/category/reference')
     if data.validTo < data.validFrom: raise HTTPException(422,'Finish date is before start date')
@@ -273,4 +271,4 @@ def passage(id:str,u=Depends(user)):
 def visits(u=Depends(user)):
     with engine.connect() as c: return [dict(r) for r in c.execute(select(tables['visits']).order_by(tables['visits'].c.entry_at.desc(),tables['visits'].c.exit_at.desc()).limit(1000)).mappings()]
 @app.get('/api/health')
-def health(): return {'status':'ok','recognition':'simulated','hardware':'simulated'}
+def health(): return {'status':'ok','recognition':'yolov9-cct-global','hardware':'simulated'}
